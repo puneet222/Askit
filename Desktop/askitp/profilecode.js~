@@ -1,0 +1,64 @@
+$(document).ready(function(){
+alert("Bind L");
+var fnf = 0;
+var fne = 0;
+var lnf = 0;
+var lne = 0;
+$("#fn").on("input",function(){
+var x = document.getElementById("fn").value;
+var ln = x.length;
+var i;
+if(ln == 0)
+fne = 1;
+for(i= 0;i<ln;i++){
+if((x[i]>='a'&&x[i]<='z')||(x[i]>='A'&&x[i]<='Z'))
+{
+$("#fndiv").text("");
+}
+else{
+$("#fndiv").text("This field can only have alphabets");
+fnf =1;
+fnf = 0;
+break;
+}
+}
+});
+$("#ln").on("input",function(){
+var x = document.getElementById("ln").value;
+var ln = x.length;
+var i;
+if(ln == 0)
+lne = 1;
+for(i= 0;i<ln;i++){
+if((x[i]>= 'a'&&x[i]<='z')||(x[i]>='A'&&x[i]<='Z'))
+{
+$("#lndiv").text("");
+lnf = 0;
+}
+else{
+$("#lndiv").text("This field can only have alphabets");
+lnf =1;
+break;
+}
+}
+});
+$("#ln").on("input",function(){
+var x = document.getElementById("ln").value;
+var ln = x.length;
+var i;
+if(ln == 0)
+lne = 1;
+for(i= 0;i<ln;i++){
+if((x[i]>= 'a'&&x[i]<='z')||(x[i]>='A'&&x[i]<='Z'))
+{
+$("#lndiv").text("");
+lnf = 0;
+}
+else{
+$("#lndiv").text("This field can only have alphabets");
+lnf =1;
+break;
+}
+}
+});
+});
